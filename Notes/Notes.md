@@ -15,3 +15,6 @@
 # trasative dependicy ->
 
 # if we have package.json and packagelock.json , we can re generate node modules, even if i delet my node modules.
+
+
+# npx -> executing our package.
