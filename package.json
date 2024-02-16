@@ -1,0 +1,14 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "\"React recap\"",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "\"AKHIL MISHRA\"",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
