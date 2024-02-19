@@ -89,7 +89,7 @@ const RestroCard = (props) => {
         className="restro-img"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-          restroData.info.cloudinaryImageId
+          restroData.info?.cloudinaryImageId
         }
         alt="restro-logo
       "
@@ -772,6 +772,7 @@ const restroObj = [
   },
   {
     info: {
+
       id: "528523",
       name: "New Ambur Biryani Point",
       city: "1",
@@ -856,7 +857,7 @@ const Body = () => {
       <div className="restro-container">
         {/* //restrocard */}
         {restroObj.map((ele, index) => (
-          <RestroCard restroData={ele.info.id} key={index} />
+          <RestroCard restroData={ele} key={ele.info.id} />
         ))}
       </div>
     </div>
