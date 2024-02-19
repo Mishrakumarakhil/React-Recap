@@ -83,6 +83,7 @@ const styleCard = {
 
 const RestroCard = (props) => {
   const { restroData } = props;
+  console.log(restroData)
   return (
     <div className="restro-card" style={styleCard}>
       <img
@@ -99,7 +100,7 @@ const RestroCard = (props) => {
       <h4>{restroData.info.cuisines.join(" , ")}</h4>
       <h4>{restroData.info.avgRating} stars</h4>
       <h4> {restroData.info.costForTwo / 100} Cost for two</h4>
-      <h4> {restroData.info.deliveryTime} minutes</h4>
+      <h4> {restroData.info.sla.deliveryTime} minutes</h4>
     </div>
   );
 };
