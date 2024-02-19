@@ -4,7 +4,8 @@
   "description": "\"React recap\"",
   "main": "App.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html"
   },
   "author": "\"AKHIL MISHRA\"",
   "license": "ISC",
