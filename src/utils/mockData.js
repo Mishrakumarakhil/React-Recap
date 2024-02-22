@@ -1,111 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-{
-  /* <div class="parent">
-    <div class="child">
-<h1>I am h1 tag</h1>
-<h1>I am h2 tag</h1>
-    </div>
-     <div class="child2">
-<h1>I am h1 tag</h1>
-<h1>I am h2 tag</h1>
-    </div>
-</div> */
-}
-
-// const parent=React.createElement(
-//     "div",
-//     {id:"parent"},
-//   [  React.createElement(
-//         "div",
-//         {id:"child"},
-//       [  React.createElement(
-//             "h1",
-//             {},
-//             "I am h1 Tag"
-//             ),React.createElement(
-//                 "h2",
-//                 {},
-//                 "I am h2 Tag"
-//                 )]
-
-//             ),
-
-//             React.createElement(
-//                 "div",
-//                 {id:"child2"},
-//               [  React.createElement(
-//                     "h1",
-//                     {},
-//                     "I am h1 Tag"
-//                     ),React.createElement(
-//                         "h2",
-//                         {},
-//                         "I am h2 Tag"
-//                         )]
-
-//                     )
-
-//         ]
-
-//             )
-
-// const heading=React.createElement("h1",{id:"heading",xyz:"abs"},"Hello world from React!")
-
-// createElement(TagName,{attribute of tag},This to add in tag||children)
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo
-          "
-          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const styleCard = {
-  backgroundColor: "#f0f0f0",
-};
-
-const RestroCard = (props) => {
-  const { restroData } = props;
-  console.log(restroData)
-  return (
-    <div className="restro-card" style={styleCard}>
-      <img
-        className="restro-img"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-          restroData.info?.cloudinaryImageId
-        }
-        alt="restro-logo
-      "
-      />
-
-      <h3>{restroData.info.name}</h3>
-      <h4>{restroData.info.cuisines.join(" , ")}</h4>
-      <h4>{restroData.info.avgRating} stars</h4>
-      <h4> {restroData.info.costForTwo / 100} Cost for two</h4>
-      <h4> {restroData.info.sla.deliveryTime} minutes</h4>
-    </div>
-  );
-};
-
-const restroObj = [
+export const restroObj = [
   {
     info: {
       id: "3241",
@@ -773,7 +666,6 @@ const restroObj = [
   },
   {
     info: {
-
       id: "528523",
       name: "New Ambur Biryani Point",
       city: "1",
@@ -850,30 +742,3 @@ const restroObj = [
     },
   },
 ];
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="restro-container">
-        {/* //restrocard */}
-        {restroObj.map((ele, index) => (
-          <RestroCard restroData={ele} key={ele.info.id} />
-        ))}
-      </div>
-    </div>
-
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
