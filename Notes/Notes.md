@@ -20,6 +20,8 @@
 
 # JSX -> JavaScript syntax which is easier to create react element. It's a html like syntax ..it's not html
 
-
-
 # config driven ui
+
+# React hooks -> it's normal js utility function
+
+# most imp hooks -> useState(),useEffect()
