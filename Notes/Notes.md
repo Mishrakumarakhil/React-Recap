@@ -25,3 +25,14 @@
 # React hooks -> it's normal js utility function
 
 # most imp hooks -> useState(),useEffect()
+
+# whenever state varible change react will re render the component.It keeps data layer sync with ui layer.
+
+# React Working principle ->
+
+React uses Reconcilation algorithem it's also known as React fiber.
+
+Virtual Dom is not a reat dom, it's a representaion of actual dom.Its' basic react element which is js object.
+Actaul dom are basically tags whice are <div></div><img/>etc..
+
+DIiff alog -> it's basically find out the diffrence between updateded VM vs previous DOM.
