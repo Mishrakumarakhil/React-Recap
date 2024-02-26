@@ -1,5 +1,6 @@
 import RestroCard from "./RestroCard";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [displayData, setDisplayData] = useState([]);
@@ -22,6 +23,9 @@ const Body = () => {
     let list = displayData.filter((ele) => ele.card.card.info.avgRating > 4.2);
     setDisplayData(list);
   };
+  if (displayData.length === 0) {
+    return <Shimmer />;
+  }
   return (
     <div className="body">
       <div className="filter">
