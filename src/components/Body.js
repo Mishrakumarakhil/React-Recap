@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [displayData, setDisplayData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
   const [searchtext, setSearchText] = useState("");
 
   useEffect(() => {
@@ -16,6 +17,9 @@ const Body = () => {
     let data = await fetch(url);
     let jsonData = await data.json();
     setDisplayData(
+      jsonData?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards
+    );
+    setFilterData(
       jsonData?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards
     );
   };
@@ -49,7 +53,7 @@ const Body = () => {
                   .includes(searchtext.toLocaleLowerCase())
               );
 
-              setDisplayData(filterdList);
+              setFilterData(filterdList);
             }}
           >
             submit
@@ -59,7 +63,7 @@ const Body = () => {
       </div>
       <div className="restro-container">
         {/* //restrocard */}
-        {displayData.map((ele, index) => (
+        {filterData.map((ele, index) => (
           <RestroCard restroData={ele} key={ele?.card?.card.info.id} />
         ))}
       </div>
