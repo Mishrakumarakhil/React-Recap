@@ -23,10 +23,12 @@ const Body = () => {
     let list = displayData.filter((ele) => ele.card.card.info.avgRating > 4.2);
     setDisplayData(list);
   };
-  if (displayData.length === 0) {
-    return <Shimmer />;
-  }
-  return (
+  // if (displayData.length === 0) {
+  //   return <Shimmer />;
+  // }
+  return displayData.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button onClick={handleRestaurantList}>Top Rated Restaurant</button>
