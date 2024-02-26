@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [displayData, setDisplayData] = useState([]);
+  const [searchtext, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -31,6 +32,29 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            placeholder="search box"
+            value={searchtext}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            onClick={() => {
+              //Updated restro list and update UI
+
+              const filterdList = displayData.filter((ele) =>
+                ele.card?.card.info.name
+                  .toLocaleLowerCase()
+                  .includes(searchtext.toLocaleLowerCase())
+              );
+
+              setDisplayData(filterdList);
+            }}
+          >
+            submit
+          </button>
+        </div>
         <button onClick={handleRestaurantList}>Top Rated Restaurant</button>
       </div>
       <div className="restro-container">

@@ -64,3 +64,5 @@
   padding: 0px 5px;
   cursor: pointer;
 }
+
+.filter{display: flex;}
