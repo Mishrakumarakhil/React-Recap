@@ -1,9 +1,8 @@
 import RestroCard from "./RestroCard";
-import { restroObj } from "../utils/mockData";
 import { useState, useEffect } from "react";
 
 const Body = () => {
-  const [displayData, setDisplayData] = useState(restroObj);
+  const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
     fetchData();
