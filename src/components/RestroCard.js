@@ -5,7 +5,9 @@ const styleCard = {
 };
 
 const RestroCard = (props) => {
-  const { restroData } = props;
+  let { restroData } = props;
+  restroData = restroData?.card?.card ? restroData.card.card : restroData;
+
   console.log(restroData);
   return (
     <div className="restro-card" style={styleCard}>
