@@ -14,7 +14,7 @@ const Body = () => {
     let data = await fetch(url);
     let jsonData = await data.json();
     setDisplayData(
-      jsonData.data.cards[0].groupedCard.cardGroupMap.RESTAURANT.cards
+      jsonData?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards
     );
   };
 
