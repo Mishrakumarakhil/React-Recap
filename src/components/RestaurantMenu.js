@@ -24,8 +24,8 @@ const RestaurantMenu = () => {
     resInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1].card.card;
-
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+  console.log("helllo", itemCards);
   return (
     <div className="menu">
       <h1>{name}</h1>
@@ -33,9 +33,13 @@ const RestaurantMenu = () => {
       <h3>{costForTwoMessage}</h3>
       <h2>Menu</h2>
       <ul>
-        {itemCards.map((ele) => {
-          return <li key={ele.card.info.id}>{ele.card.info.name}</li>;
-        })}
+        {itemCards ? (
+          itemCards.map((ele) => {
+            return <li key={ele.card.info.id}>{ele.card.info.name}</li>;
+          })
+        ) : (
+          <div>Ooops !! Data not found!</div>
+        )}
       </ul>
     </div>
   );
