@@ -72,3 +72,5 @@
 // const heading=React.createElement("h1",{id:"heading",xyz:"abs"},"Hello world from React!")
 
 // createElement(TagName,{attribute of tag},This to add in tag||children) -->
+
+// class base -> 1. constructor, render,component mount,
