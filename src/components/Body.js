@@ -45,15 +45,17 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4 flex items-center">
           <input
+            className="border border-solid border-black"
             type="text"
             placeholder="search box"
             value={searchtext}
             onChange={(e) => setSearchText(e.target.value)}
           />
           <button
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               //Updated restro list and update UI
 
@@ -69,9 +71,16 @@ const Body = () => {
             submit
           </button>
         </div>
-        <button onClick={handleRestaurantList}>Top Rated Restaurant</button>
+        <div className="search m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-2 bg-red-100 rounded-lg"
+            onClick={handleRestaurantList}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
       </div>
-      <div className="restro-container">
+      <div className="restro-container flex flex-wrap">
         {/* //restrocard */}
         {filterData.map((ele, index) => (
           <Link
