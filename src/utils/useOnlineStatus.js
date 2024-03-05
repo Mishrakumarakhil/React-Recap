@@ -12,6 +12,12 @@ const useOnlineStatus = () => {
     window.addEventListener("online", () => {
       setOnlineStatus(true);
     });
+
+    // clean up to avoid memory-leak
+    // return () => {
+    //     window.removeEventListener("online", handleStatusChange);
+    //     window.removeEventListener("offline", handleStatusChange);
+    //   };
   }, []);
 
   //boolean value
