@@ -1,4 +1,4 @@
-import RestroCard from "./RestroCard";
+import RestroCard, { withPromotedRestroCard } from "./RestroCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ const Body = () => {
   const [displayData, setDisplayData] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchtext, setSearchText] = useState("");
+  const PromotedResto = withPromotedRestroCard(RestroCard);
 
   useEffect(() => {
     fetchData();
@@ -88,7 +89,11 @@ const Body = () => {
             to={"/restaurants/" + ele?.card?.card.info.id}
           >
             {" "}
-            <RestroCard restroData={ele} />
+            {ele?.card?.card.info?.promoted ? (
+              <PromotedResto restroData={ele} />
+            ) : (
+              <RestroCard restroData={ele} />
+            )}
           </Link>
         ))}
       </div>
