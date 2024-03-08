@@ -1,14 +1,17 @@
 import RestroCard, { withPromotedRestroCard } from "./RestroCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [displayData, setDisplayData] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchtext, setSearchText] = useState("");
   const PromotedResto = withPromotedRestroCard(RestroCard);
+
+  const { setUserName, loggedInUser } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -79,6 +82,14 @@ const Body = () => {
           >
             Top Rated Restaurant
           </button>
+        </div>
+        <div className="search m-4 p-4 flex items-center">
+          <spna>User Name</spna>
+          <input
+            className="border border-black p-2"
+            onChange={(e) => setUserName(e.target.value)}
+            value={loggedInUser}
+          />
         </div>
       </div>
       <div className="restro-container flex flex-wrap">
