@@ -22,11 +22,13 @@ const RestaurantMenu = () => {
     );
   console.log("helllo", category);
   return (
-    <div className="menu">
-      <h1>{name}</h1>
-      <h3>{cuisines.join(", ")}</h3>
-      <h3>{costForTwoMessage}</h3>
-      <h2>Menu</h2>
+    <div className="text-center ">
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <p className="font-bold text-lg">
+        {cuisines.join(", ")} - {costForTwoMessage}
+      </p>
+
+      {/* <h2>Menu</h2>
       <ul>
         {itemCards ? (
           itemCards.map((ele) => {
@@ -35,7 +37,7 @@ const RestaurantMenu = () => {
         ) : (
           <div>Ooops !! Data not found!</div>
         )}
-      </ul>
+      </ul> */}
     </div>
   );
 };
