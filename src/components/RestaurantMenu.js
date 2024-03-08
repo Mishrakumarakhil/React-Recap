@@ -37,7 +37,7 @@ const RestaurantMenu = () => {
           key={ind}
           data={ele.card.card}
           showItems={ind === showIndex}
-          setShowIndex={() => setShowIndex(ind)}
+          setShowIndex={() => setShowIndex(ind == showIndex ? null : ind)}
         />
       ))}
 
