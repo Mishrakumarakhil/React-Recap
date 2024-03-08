@@ -1,6 +1,7 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaturantCategory";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
@@ -27,6 +28,10 @@ const RestaurantMenu = () => {
       <p className="font-bold text-lg">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
+
+      {category.map((ele) => (
+        <RestaurantCategory data={ele.card.card} />
+      ))}
 
       {/* <h2>Menu</h2>
       <ul>
