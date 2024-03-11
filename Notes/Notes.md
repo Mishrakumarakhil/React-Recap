@@ -36,3 +36,22 @@ Virtual Dom is not a reat dom, it's a representaion of actual dom.Its' basic rea
 Actaul dom are basically tags whice are <div></div><img/>etc..
 
 DIiff alog -> it's basically find out the diffrence between updateded VM vs previous DOM.
+
+Redux Adv -> 1. handling data, managing your store,when we use redux it's east to debug application by using redux dev tools
+
+Redux store -> it's a big object,its kept in a central global space.which devide into slices.
+Slice in redux;
+
+# redux flow for write data===> click on react app -> dispatch (action)-> reducer function ()=>{}-> updates the slice of redux store.
+
+# redux flow for read data==> selector(subscribing to the store)
+
+# Redux Toolkit
+
+-Install @reduxjs/toolkit, react-redux
+-build store
+-connect store to our app
+-slice creation (cart)
+-dispatch action
+
+- Selector
