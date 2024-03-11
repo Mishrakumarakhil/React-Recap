@@ -6,7 +6,7 @@ const ItemList = ({ items }) => {
   const dispatch = useDispatch();
 
   const hanldeAddItems = (data) => {
-    dispatch(addItem("bread"));
+    dispatch(addItem(data));
   };
   return (
     <>
@@ -33,7 +33,7 @@ const ItemList = ({ items }) => {
             <div className="absolute">
               <button
                 className="bg-black text-white shadow-lg  p-2 mx-16 rounded-lg "
-                onClick={hanldeAddItems}
+                onClick={() => hanldeAddItems(ele)}
               >
                 Add +
               </button>
