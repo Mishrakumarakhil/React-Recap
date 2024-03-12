@@ -55,3 +55,9 @@ Slice in redux;
 -dispatch action
 
 - Selector
+
+# types of testing (devloper can do)
+
+-Unit Testing (Major)-> React componet test in isolation || one unit of code or small compoennt
+-Integration Testing (Major) -> testign the intrgration of component or where multiple componetnt affect by using some action
+-End to End Testing - e2e --> testing the app as soon as user landing to page , whatever user will do throughout the journey
