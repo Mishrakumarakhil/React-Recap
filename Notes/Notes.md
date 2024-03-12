@@ -71,3 +71,4 @@ Slice in redux;
 - install babel jedepency for jest
 - configure babel
 - config parcel config file tp disable default babel transpilation
+- jest coniguration
