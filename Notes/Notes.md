@@ -63,3 +63,10 @@ Slice in redux;
 -End to End Testing - e2e --> testing the app as soon as user landing to page , whatever user will do throughout the journey
 
 # React Testing Library uses jest behind the scene
+
+# Setting up testing ij our app
+
+- install react testing library
+- install jest
+- install babel jedepency for jest
+- configure babel
