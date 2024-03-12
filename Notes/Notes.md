@@ -73,3 +73,5 @@ Slice in redux;
 - config parcel config file tp disable default babel transpilation
 - jest coniguration -> npx jest --init
 - Install jsodm lib
+- Install @babel/preset-react to make jsx work in test cases
+- Install @testing-library/jest-dom
