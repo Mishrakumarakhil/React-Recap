@@ -79,3 +79,13 @@ Slice in redux;
 # Unit Testing -> Where we focus on signle component functionlity or component individual node.
 
 # Integration Testing -> Where multiple component works together
+
+# support fetch function in test file ->
+
+     global.fetch=jest.fn(()=>{
+        return Promise.resolve({
+            json:()=>{
+                return Promise.resolve(data)
+            }
+        })
+     })
