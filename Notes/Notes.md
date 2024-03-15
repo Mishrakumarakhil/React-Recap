@@ -75,3 +75,7 @@ Slice in redux;
 - Install jsodm lib
 - Install @babel/preset-react to make jsx work in test cases
 - Install @testing-library/jest-dom
+
+# Unit Testing -> Where we focus on signle component functionlity or component individual node.
+
+# Integration Testing -> Where multiple component works together
