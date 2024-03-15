@@ -89,3 +89,5 @@ Slice in redux;
             }
         })
      })
+
+# "watch-test" :"jest --watch" -> add in script object in package json file for not stopiing test
